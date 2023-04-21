@@ -1,12 +1,15 @@
 import React, {useState, useEffect, useContext} from 'react';
 import { AppContext } from '../../StateProvider';
 import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 function Home(){
     const {requests, setRequests} = useContext(AppContext)
+    const [name, setName] = useState("")
+    const [description, setDescription] = useState("")
 
     const addr = () => {
-        setRequests([...requests, {name:"Michael", description:"Help me carry a table pls"}])
+        setRequests([...requests, {name, description}])
     }
 
   return (
@@ -20,6 +23,12 @@ function Home(){
             </div>
             
         ))}
+        <TextField value={name} onChange={(event) => {
+          setName(event.target.value);
+        }} label="Name" variant="outlined" />
+        <TextField value={description} onChange={(event) => {
+          setDescription(event.target.value);
+        }}label="Desription" variant="outlined" />
     </div>
   );
 }

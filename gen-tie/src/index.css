@@ -3,6 +3,7 @@
   --secondary-main: rgba(43,68,212,0.52);
   --background-default: #282c34;
   --background-paper: #292525;
+  overflow: hidden;
 }
 * {
   padding: 0;

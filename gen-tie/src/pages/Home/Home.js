@@ -2,7 +2,10 @@ import React, {useState, useEffect, useContext} from 'react';
 import { AppContext } from '../../StateProvider';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-
+import Grid2 from '@mui/material/Unstable_Grid2';
+import IconButton from '@mui/material/IconButton';
+import SendIcon from '@mui/icons-material/Send';
+import './Home.css'
 function Home(){
     const {requests, setRequests} = useContext(AppContext)
     const [name, setName] = useState("")
@@ -14,7 +17,8 @@ function Home(){
 
   return (
     <div>
-        <h3>Young</h3>
+      <div>
+      <h3>Young</h3>
         <Button variant="contained" onClick={addr}>Add request</Button>
         {requests.map((req) => (
             <div>
@@ -29,6 +33,12 @@ function Home(){
         <TextField value={description} onChange={(event) => {
           setDescription(event.target.value);
         }}label="Desription" variant="outlined" />
+      </div>
+
+      <div className='send-msg p-2'>
+      <IconButton aria-label="send" color="primary" onClick={addr}><SendIcon/></IconButton>
+      <TextField label="message" size="small" fullWidth variant="outlined" />
+      </div>
     </div>
   );
 }

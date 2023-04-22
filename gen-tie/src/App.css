@@ -11,7 +11,9 @@
 .cardContainer {
   height: 300px;
   min-height: 500px;
+  overflow: hidden;
 }
+
 
 .recipe-card {
   position: relative;
@@ -34,4 +36,9 @@
   position: absolute;
   bottom: 20px;
   right: 20px
+}
+
+.media img{
+  width: 100%;
+  height: auto;
 }

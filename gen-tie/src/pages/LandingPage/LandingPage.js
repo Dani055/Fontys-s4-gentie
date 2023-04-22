@@ -63,33 +63,34 @@ function LandingPage(){
 
   return (
     <div>
-        <Button variant="contained" onClick={confirmYoung}>Young</Button>
-        <Button variant="outlined" onClick={confirmElder}>Elder</Button>
-        <div className='cardContainer container'>
-          <div className='position-relative'>
+      <Button variant="contained" onClick={confirmYoung}>Young</Button>
+      <Button variant="outlined" onClick={confirmElder}>Elder</Button>
+      <div className='cardContainer container'>
+        <div className='position-relative'>
           {db.map((recipe, index) => (
-          <TinderCard
-            ref={childRefs[index]}
-            className='swipe'
-            key={recipe.name}
-            onSwipe={onSwipe}
-            preventSwipe={['up', 'down']}
-            swipeRequirementType='position'
-          >
-            <div
-              style={{ backgroundImage: 'url(' + recipe.url + ')' }}
-              className='recipe-card p-2'
+            <TinderCard
+              ref={childRefs[index]}
+              className='swipe'
+              key={recipe.name}
+              onSwipe={onSwipe}
+              preventSwipe={['up', 'down']}
+              swipeRequirementType='position'
             >
-              <h3>{recipe.name}</h3>
-              <button className="pressable button-recipe-card-left" onClick={() => swipe('left', index)}>Swipe left!</button>
-              <button className="pressable button-recipe-card-right" onClick={() => swipe('right', index)}>Swipe right!</button>
-            </div>
-            
-          </TinderCard>
-        ))}
-          </div>
-        
+              <div
+                style={{ backgroundImage: 'url(' + recipe.url + ')' }}
+                className='recipe-card p-2'
+              >
+                <h3>{recipe.name}</h3>
+                <button className="pressable button-recipe-card-left" onClick={() => swipe('left', index)}>Swipe left!</button>
+                <button className="pressable button-recipe-card-right" onClick={() => swipe('right', index)}>Swipe right!</button>
+              </div>
+
+            </TinderCard>
+          ))}
         </div>
+
+      </div>
+      
     </div>
   );
 }

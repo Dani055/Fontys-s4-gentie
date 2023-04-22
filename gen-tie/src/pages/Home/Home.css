@@ -1,0 +1,6 @@
+.send-msg{
+    position: fixed;
+    bottom: 56px;
+    display: flex;
+    width: 100%;
+}

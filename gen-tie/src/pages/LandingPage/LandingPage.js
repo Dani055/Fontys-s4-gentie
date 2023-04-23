@@ -4,42 +4,14 @@ import { AppContext } from '../../StateProvider';
 import Button from '@mui/material/Button';
 import TinderCard from 'react-tinder-card'
 
-const db = [
-  {
-    name: 'Spaghetti carbonara',
-    url: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1001491_11-2e0fa5c.jpg?resize=768,574'
-  },
-  {
-    name: 'Broccoli',
-    url: 'https://domf5oio6qrcr.cloudfront.net/medialibrary/5390/h1218g16207258089583.jpg'
-  },
-  {
-    name: 'Baklava',
-    url: 'https://cleobuttera.com/wp-content/uploads/2018/03/lifted-baklava.jpg'
-  },
-  {
-    name: 'Pelmeni',
-    url: 'https://upload.wikimedia.org/wikipedia/commons/d/df/Pelmeni_Russian.jpg'
-  },
-]
-
 function LandingPage(){
-    const {isElder, setIsElder} = useContext(AppContext)
-    const [currentIndex, setCurrentIndex] = useState(0)
-    const navigate = useNavigate();
+    const {isElder, setIsElder, setLoggedUser, recipes} = useContext(AppContext)
 
-    useEffect(() => {
-      const itemElements = document.querySelectorAll('.recipe-card::before');
-      itemElements.forEach((itemElement) => {
-        const computedStyle = getComputedStyle(itemElement);
-        const backgroundImage = computedStyle.getPropertyValue('background-image');
-        itemElement.style.setProperty('--background-image', backgroundImage);
-      });
-    }, []);
+    const navigate = useNavigate();
 
     const childRefs = useMemo(
       () =>
-        Array(db.length)
+        Array(recipes.length)
           .fill(0)
           .map((i) => React.createRef()),
       []
@@ -47,10 +19,18 @@ function LandingPage(){
 
     const confirmYoung = () => {
         setIsElder(false)
+        setLoggedUser({
+          name: "Josh Sevens",
+          picture: "https://media.licdn.com/dms/image/C5603AQF9V7rulvhcGw/profile-displayphoto-shrink_800_800/0/1648538863146?e=2147483647&v=beta&t=adF9VspgE-A8s_PnLvt8pjs3D6MpbZrcM5FQInUnvAA"
+        })
         navigate("/young/home")
     };
     const confirmElder = () => {
         setIsElder(true)
+        setLoggedUser({
+          name: "Bold Boelaars",
+          picture: "https://upload.wikimedia.org/wikipedia/commons/5/54/Angry_Grandpa_-_2015_%28cropped%29.jpg"
+        })
         navigate("/elder/home")
     };
 
@@ -67,7 +47,7 @@ function LandingPage(){
       <Button variant="outlined" onClick={confirmElder}>Elder</Button>
       <div className='cardContainer container'>
         <div className='position-relative'>
-          {db.map((recipe, index) => (
+          {recipes.map((recipe, index) => (
             <TinderCard
               ref={childRefs[index]}
               className='swipe'

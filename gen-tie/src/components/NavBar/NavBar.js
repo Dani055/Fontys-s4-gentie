@@ -4,6 +4,7 @@ import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import Battery2BarIcon from '@mui/icons-material/Battery2Bar';
 import SettingsIcon from '@mui/icons-material/Settings';
+import { grey } from '@mui/material/colors';
 
 function NavBar() {
   let navigate = useNavigate()
@@ -18,6 +19,7 @@ function NavBar() {
     position: 'fixed',
     bottom: 0,
     width: '100%',
+    zIndex: 99
   };
 
   

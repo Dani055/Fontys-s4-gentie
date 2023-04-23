@@ -1,5 +1,9 @@
+.App{
+  min-height: 100vh;
+}
 .content{
   margin-bottom: 56px;
+  position: relative;
 }
 
 .swipe {

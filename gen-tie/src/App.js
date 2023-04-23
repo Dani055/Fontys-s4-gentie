@@ -5,6 +5,7 @@ import './App.css';
 import LandingPage from './pages/LandingPage/LandingPage';
 import NavBar from './components/NavBar/NavBar';
 import theme from './theme';
+import themeElder from './themeElder';
 import HomeElder from './pages/HomeElder/HomeElder';
 import { AppContext } from './StateProvider';
 import YoungProtected from './guards/YoungProtected';
@@ -16,7 +17,7 @@ function App() {
 
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={isElder ? themeElder : theme}>
     <div className="App">
       <Router>
         <div className="content">

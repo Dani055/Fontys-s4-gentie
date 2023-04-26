@@ -3,9 +3,12 @@
         "id": 1,
         "user" : {
             "name": "Bold Boelaars",
+            "phone": "+310985123",
             "picture": "https://upload.wikimedia.org/wikipedia/commons/5/54/Angry_Grandpa_-_2015_%28cropped%29.jpg"
         },
         "description": "Help me with groceries",
+        "type": "Shopping",
+        "benefit": "Teach you how to knit",
         "latitude": 51.432440,
         "longitude": 5.470393
         
@@ -14,9 +17,12 @@
         "id": 2,
         "user" : {
             "name": "Vulcho Stavrev",
+            "phone": "+3109120975",
             "picture": "https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2023-01/grandpa-christmas-presents-mc-230116-03-19fb63.jpg"
         },
-        "description": "I need to carry a couch",
+        "description": "I need to move a couch in another room. I am too weak to do it by myself",
+        "type": "Transport",
+        "benefit": "Tell you a story",
         "latitude": 51.450493,
         "longitude": 5.465741
     },
@@ -24,9 +30,12 @@
         "id": 3,
         "user" : {
             "name": "Rositsa Nikolova",
+            "phone": "+3109751242",
             "picture": "https://images.pexels.com/photos/509236/pexels-photo-509236.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
         },
-        "description": "Yes hello",
+        "description": "Need help with gardening",
+        "type": "Gardening",
+        "benefit": "A box of strawberries",
         "latitude": 51.470493,
         "longitude": 5.485741
     }

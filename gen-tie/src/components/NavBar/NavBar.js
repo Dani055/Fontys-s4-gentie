@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate, useLocation } from 'react-router-dom';
+import { AppContext } from '../../StateProvider';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import Battery2BarIcon from '@mui/icons-material/Battery2Bar';
-import SettingsIcon from '@mui/icons-material/Settings';
-import { grey } from '@mui/material/colors';
+import HomeIcon from '@mui/icons-material/Home';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import EventIcon from '@mui/icons-material/Event';
+import ImageIcon from '@mui/icons-material/Image';
 
 function NavBar() {
+  const {isElder} = useContext(AppContext)
   let navigate = useNavigate()
   const location = useLocation();
   const [value, setValue] = useState("/");
@@ -17,8 +20,9 @@ function NavBar() {
 
   const navbarStyle = {
     position: 'fixed',
-    bottom: 0,
+    bottom: 30,
     width: '100%',
+    borderRadius: 30,
     zIndex: 99
   };
 
@@ -34,8 +38,10 @@ function NavBar() {
           navigate(newValue)
         }}
       >
-        <BottomNavigationAction label="Battery" value="/young/home" icon={<Battery2BarIcon />} />
-        <BottomNavigationAction label="Settings" value="/settings" icon={<SettingsIcon />} />
+        {isElder ? <BottomNavigationAction label="Home" value="/elder/home" icon={<HomeIcon />}/> : <BottomNavigationAction label="Home" value="/young/home" icon={<HomeIcon />} />}
+        <BottomNavigationAction label="Events" value="/events" icon={<EventIcon />} />
+        <BottomNavigationAction label="Recipes" value="/recipes" icon={<AutoStoriesIcon />} />
+        <BottomNavigationAction label="Gallery" value="/gallery" icon={<ImageIcon />} />
       </BottomNavigation>
   );
 }

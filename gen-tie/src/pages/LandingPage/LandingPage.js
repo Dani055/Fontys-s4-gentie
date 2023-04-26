@@ -1,21 +1,16 @@
-import React, {useContext, useState, useMemo, useEffect} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import { useNavigate } from "react-router-dom";
 import { AppContext } from '../../StateProvider';
 import Button from '@mui/material/Button';
-import TinderCard from 'react-tinder-card'
+
+import "./LandingPage.css"
 
 function LandingPage(){
     const {isElder, setIsElder, setLoggedUser, recipes} = useContext(AppContext)
 
     const navigate = useNavigate();
 
-    const childRefs = useMemo(
-      () =>
-        Array(recipes.length)
-          .fill(0)
-          .map((i) => React.createRef()),
-      []
-    )
+
 
     const confirmYoung = () => {
         setIsElder(false)
@@ -34,41 +29,42 @@ function LandingPage(){
         navigate("/elder/home")
     };
 
-    const onSwipe = (direction) => {
-      console.log('You swiped: ' + direction)
-    }
-    const swipe = async (dir, index) => {
-      await childRefs[index].current.swipe(dir)
-    }
 
-  return (
+  return (  
     <div>
-      <Button variant="contained" onClick={confirmYoung}>Young</Button>
-      <Button variant="outlined" onClick={confirmElder}>Elder</Button>
-      <div className='cardContainer container'>
-        <div className='position-relative'>
-          {recipes.map((recipe, index) => (
-            <TinderCard
-              ref={childRefs[index]}
-              className='swipe'
-              key={recipe.name}
-              onSwipe={onSwipe}
-              preventSwipe={['up', 'down']}
-              swipeRequirementType='position'
-            >
-              <div
-                style={{ backgroundImage: 'url(' + recipe.url + ')' }}
-                className='recipe-card p-2'
-              >
-                <h3>{recipe.name}</h3>
-                <button className="pressable button-recipe-card-left" onClick={() => swipe('left', index)}>Swipe left!</button>
-                <button className="pressable button-recipe-card-right" onClick={() => swipe('right', index)}>Swipe right!</button>
-              </div>
-
-            </TinderCard>
-          ))}
+      <div className='media'>
+        <img src=''></img>
+      </div>
+      <div className='container px-4 pt-4 '>
+        <div className='col-sm-6 mx-auto'>
+        <div className='text-center'>
+          <h3 className='primary-color fw-600'>Welcome to GenTie</h3>
+          <p>Tell us more about yourself</p>
         </div>
 
+        <div onClick={() => confirmYoung()} className='row align-items-center bg-elder-light'>
+          <div className='col-8'>
+            <p className='m-1 text-center text-elder-primary'>I belong to the younger generation</p>
+          </div>
+          <div className='col-4 pb-2'>
+            <div className='media'>
+              <img src='/Millennial-pana.svg'></img>
+            </div>
+          </div>
+        </div>
+
+        <div onClick={() => confirmElder()} className='row align-items-center bg-elder-light mt-3'>
+          <div className='col-8'>
+            <p className='m-1 text-center text-elder-primary'>I belong to the senior generation</p>
+          </div>
+          <div className='col-4'>
+            <div className='media pb-3'>
+              <img src="/Grandma-pana.svg"></img>
+            </div>
+          </div>
+        </div>
+        </div>
+        
       </div>
       
     </div>

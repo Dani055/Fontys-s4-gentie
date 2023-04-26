@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import { ThemeProvider } from '@mui/material/styles';
 import './App.css';
@@ -11,10 +11,24 @@ import { AppContext } from './StateProvider';
 import YoungProtected from './guards/YoungProtected';
 import ElderProtected from './guards/ElderProtected';
 import Home from './pages/Home/Home';
+import RecipesPage from './pages/RecipesPage/RecipesPage';
 
 function App() {
   const {isElder, setIsElder} = useContext(AppContext)
 
+  useEffect(() => {
+    requestNotificationPermission();
+  }, []);
+
+  const requestNotificationPermission = async () => {
+    if ('Notification' in window) {
+      const permission = await window.Notification.requestPermission();
+      if (permission !== 'granted') {
+        throw new Error('Permission not granted for Notification');
+      }
+    }
+    
+  };
 
   return (
     <ThemeProvider theme={isElder ? themeElder : theme}>
@@ -35,6 +49,9 @@ function App() {
             <ElderProtected isElder={isElder}>
               <HomeElder/>
             </ElderProtected>
+          } />
+          <Route path="/recipes" element={
+            <RecipesPage/>
           } />
         </Routes>
         </div>

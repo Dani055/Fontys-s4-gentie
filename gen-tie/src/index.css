@@ -1,8 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 :root {
-  --primary-main: #5a7fec;
-  --secondary-main: rgba(43,68,212,0.52);
-  --background-default: #282c34;
-  --background-paper: #292525;
+  --elder-main-1: #7e5740;
+  --elder-main-2: #87614A;
+  --elder-main-3: #906A54;
+  --elder-main-4: #A98063;
+  --elder-main-5: #C29572;
+  --elder-main-6: #F7EEE7;
+  --primary-main-1: #F4bf90;
+  --primary-main-2: #f8d4a4;
+  --primary-main-3: #fce8b8;
+  --young-main-1: #7E9459;
+  --young-main-2: #E6EBDF;
+}
+body{
+  font-family: "Roboto", Verdana, sans-serif !important;
 }
 * {
   padding: 0;

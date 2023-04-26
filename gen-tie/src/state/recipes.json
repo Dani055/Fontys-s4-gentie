@@ -1,18 +1,38 @@
 [
     {
       "name": "Spaghetti carbonara",
+      "user" : {
+        "name": "Alex Shefof",
+        "picture": "https://ddg.wiki/wp-content/uploads/sites/22/2019/02/thispersondoesnotexist.com_000.jpg"
+      },
+      "rating": 4.3,
       "url": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1001491_11-2e0fa5c.jpg?resize=768,574"
     },
     {
       "name": "Broccoli",
+      "user" : {
+        "name": "Wade Sevens",
+        "picture": "https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/02/pdne3.png"
+      },
+      "rating": 3.9,
       "url": "https://domf5oio6qrcr.cloudfront.net/medialibrary/5390/h1218g16207258089583.jpg"
     },
     {
       "name": "Baklava",
+      "user" : {
+        "name": "Ilian",
+        "picture": "https://qph.cf2.quoracdn.net/main-qimg-fa332d735a61068190cedfd34206ae4d-pjlq"
+      },
+      "rating": 4.1,
       "url": "https://cleobuttera.com/wp-content/uploads/2018/03/lifted-baklava.jpg"
     },
     {
       "name": "Pelmeni",
+      "user" : {
+        "name": "Jane Doe",
+        "picture": "https://ph-files.imgix.net/81c8176a-1b00-4f10-b60f-2ab2729d0a14.png?auto=format"
+      },
+      "rating": 4.6,
       "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Pelmeni_Russian.jpg"
     }
 ]

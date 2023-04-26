@@ -6,6 +6,8 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 import 'jquery';
 import { StateProvider } from './StateProvider';
 

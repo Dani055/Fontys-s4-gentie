@@ -7,5 +7,15 @@
     width: 100%;
 }
 .home{
-    margin-bottom: 112px;
+    margin-bottom: -56px;
+}
+.leaflet-popup-content-wrapper{
+    border-radius: 20px;   
+}
+.leaflet-popup-content{
+    margin: 13px 20px
+}
+a.leaflet-popup-close-button{
+    right: 14px !important;
+    top: 10px !important
 }

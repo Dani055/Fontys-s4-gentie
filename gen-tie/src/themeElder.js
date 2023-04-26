@@ -4,13 +4,10 @@ const themeElder = createTheme({
     palette: {
       type: 'light',
       primary: {
-        main: '#795548',
+        main: '#C29572',
       },
       secondary: {
-        main: '#795548',
-      },
-      background: {
-        paper: '#efefef',
+        main: '#F7EEE7',
       },
     },
 });

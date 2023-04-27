@@ -1,0 +1,6 @@
+.recipe-tab{
+    height: 580px;
+    overflow-y: scroll;
+    background-color: var(--young-main-2);
+    border-radius: 20px;
+}

@@ -1,6 +1,36 @@
 [
     {
       "name": "Spaghetti carbonara",
+      "prepTime": 15,
+      "cookTime": 20,
+      "difficulty": "Easy",
+      "tags": [
+        "Cheese",
+        "Healthy",
+        "Quick",
+        "Family"
+      ],
+      "ingredients":[
+        "100g pancetta",
+        "50g pecorino cheese",
+        "50g parmesan",
+        "3 large eggs",
+        "350g spaghetti",
+        "2 plump garlic cloves, peeled and left whole",
+        "50g unsalted butter",
+        "sea salt and freshly ground black pepper"
+      ],
+      "steps": [
+        "Put a large saucepan of water on to boil.",
+        "Finely chop the 100g pancetta, having first removed any rind. Finely grate 50g pecorino cheese and 50g parmesan and mix them together.",
+        "Beat the 3 large eggs in a medium bowl and season with a little freshly grated black pepper. Set everything aside.",
+        "Add 1 tsp salt to the boiling water, add 350g spaghetti and when the water comes back to the boil, cook at a constant simmer, covered, for 10 minutes or until al dente (just cooked).",
+        "Leave to cook on a medium heat for about 5 minutes, stirring often, until the pancetta is golden and crisp. The garlic has now imparted its flavour, so take it out with a slotted spoon and discard.",
+        "Keep the heat under the pancetta on low. When the pasta is ready, lift it from the water with a pasta fork or tongs and put it in the frying pan with the pancetta.",
+        "Take the pan of spaghetti and pancetta off the heat. Now quickly pour in the eggs and cheese. Using the tongs or a long fork, lift up the spaghetti so it mixes easily with the egg mixture, which thickens but doesn’t scramble, and everything is coated.",
+        "Use a long-pronged fork to twist the pasta on to the serving plate or bowl. Serve immediately with a little sprinkling of the remaining cheese and a grating of black pepper."
+
+      ],
       "user" : {
         "name": "Alex Shefof",
         "picture": "https://ddg.wiki/wp-content/uploads/sites/22/2019/02/thispersondoesnotexist.com_000.jpg"
@@ -9,16 +39,65 @@
       "url": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1001491_11-2e0fa5c.jpg?resize=768,574"
     },
     {
-      "name": "Broccoli",
+      "name": "Pork ribs",
+      "prepTime": 20,
+      "cookTime": 70,
+      "difficulty": "Medium",
+      "tags": [
+        "Meat",
+        "Gluten free",
+        "Dairy-free",
+        "Protein",
+        "Family"
+      ],
+      "ingredients":[
+        "Kosher salt",
+        "Garlic powder",
+        "Freshly cracked black pepper",
+        "Chili powder",
+        "Paprika",
+        "Cayenne",
+        "Baby back pork ribs",
+        "Homemade barbecue sauce"
+      ],
+      "steps": [
+        "First things first: heat the oven and make the dry rub.",
+        "Give the pork ribs a generous, even coating on both sides with your dry rub, then place them onto a rimmed baking sheet.",
+        "Tightly wrap the baking sheet with aluminum foil. Make it good and snug, trapping as much fat and juices as possible so that the meat gets nice and tender. Place them in the oven until they're practically falling apart.",
+        "While you're waiting for your ribs, make the homemade BBQ sauce. You've got the time, and it's so worth it!",
+        "Once the pork ribs are done, take them out of the oven and coat them in BBQ sauce before broiling until the BBQ sauce caramelizes. Be sure to keep an eye on them. We've come this far, we don't want them to burn!",
+        "Take those beautiful pork ribs out of the oven, and let them rest for about 10 minutes. Then get ready for a barbecue feast!"
+      ],
       "user" : {
         "name": "Wade Sevens",
         "picture": "https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/02/pdne3.png"
       },
       "rating": 3.9,
-      "url": "https://domf5oio6qrcr.cloudfront.net/medialibrary/5390/h1218g16207258089583.jpg"
+      "url": "https://www.recipetineats.com/wp-content/uploads/2016/01/Oven-Pork-Ribs-with-Barbecue-Sauce_4.jpg"
     },
     {
       "name": "Baklava",
+      "prepTime": 20,
+      "cookTime": 40,
+      "difficulty": "Hard",
+      "tags": [
+        "Sugar",
+        "Dessert",
+        "Pastry",
+        "Family"
+      ],
+      "ingredients":[
+        "Phyllo Dough",
+        "Nuts",
+        "Butter",
+        "Cinnamon",
+        "Water, Sugar, Vanilla, and Honey"
+      ],
+      "steps": [
+        "Stack eight sheets of phyllo dough, brushing with butter between each layer, to create a sturdy base. Sprinkle it with a mixture of chopped nuts and cinnamon. Top with two sheets of phyllo dough and follow with the nut mixture. Repeat this process a few more times, until the nut mixture is gone. Top with about eight more layers of phyllo, buttering each layer.",
+        "Cut the baklava into diamond or square shapes. Be sure to cut all the way to the bottom of the pan. Bake until golden and crisp.",
+        "Boil water and sugar until sugar is melted. Add vanilla and honey. Remove the baklava from the oven and immediately pour syrup over it. Let cool before serving."
+      ],
       "user" : {
         "name": "Ilian",
         "picture": "https://qph.cf2.quoracdn.net/main-qimg-fa332d735a61068190cedfd34206ae4d-pjlq"
@@ -28,9 +107,35 @@
     },
     {
       "name": "Pelmeni",
+      "prepTime": 60,
+      "cookTime": 10,
+      "difficulty": "Easy",
+      "tags": [
+        "Fast",
+        "Slav",
+        "Meat",
+        "Healthy"
+      ],
+      "ingredients":[
+        "1 large egg",
+        "1 teaspoon vegetable oil",
+        "1 teaspoon salt",
+        "3 cups all-purpose flour",
+        "18 ounces ground beef",
+        "1 small onion, chopped",
+        "1 tablespoon coarse salt",
+        "freshly ground pepper to taste"
+      ],
+      "steps": [
+        "Make dough: Combine egg, oil, and salt in a liquid measuring cup; add enough warm water to fill to 1 cup. Pour into a large bowl and knead in 3 cups flour until smooth and elastic. Cover with a dish towel and let dough rest for 30 minutes.",
+        "Meanwhile, make filling: Combine ground beef, onion, water, salt, and pepper in a medium bowl; mix thoroughly by hand or using a fork. Set aside.",
+        "Dust a baking sheet lightly with 1 tablespoon flour; set aside.",
+        "Roll out a portion of dough very thinly on a lightly floured surface; keep remaining dough covered with a dish towel to avoid drying out. Cut out 2 1/2-inch rounds with a cookie cutter. Place about 1 teaspoon filling on one side of each dough circle. Fold dough over and seal the edges using your fingers, forming a crescent. Join the ends and pinch them together. Place on the prepared baking sheet. Repeat with remaining dough and filling. Freeze pelmeni for 30 minutes to prevent them from sticking together.",
+        "Bring a large pot of lightly salted water to a simmer. Working in batches, cook frozen pelmeni in simmering water until meat is cooked through and pelmeni float to the top, about 5 minutes. Continue cooking for 5 more minutes. Transfer to serving plates using a slotted spoon."
+      ],
       "user" : {
         "name": "Jane Doe",
-        "picture": "https://ph-files.imgix.net/81c8176a-1b00-4f10-b60f-2ab2729d0a14.png?auto=format"
+        "picture": "https://img.freepik.com/free-photo/grandma-with-thumb-up_1187-1060.jpg?w=500"
       },
       "rating": 4.6,
       "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Pelmeni_Russian.jpg"

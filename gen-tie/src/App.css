@@ -4,13 +4,16 @@
   background-color: var(--elder-main-6);
   border-radius: 15px;
 }
+.bg-young{
+  background-color: var(--young-main-1);
+}
 .bg-elder-light:hover{
   background-color: var(--primary-main-3);
   cursor: pointer;
 }
 .content{
   z-index: 1;
-  margin-bottom: 56px;
+  margin-bottom: 100px;
   position: relative;
 }
 .text-elder-primary{

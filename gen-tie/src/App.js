@@ -12,9 +12,10 @@ import YoungProtected from './guards/YoungProtected';
 import ElderProtected from './guards/ElderProtected';
 import Home from './pages/Home/Home';
 import RecipesPage from './pages/RecipesPage/RecipesPage';
+import AuthProtected from './guards/AuthProtected';
 
 function App() {
-  const {isElder, setIsElder} = useContext(AppContext)
+  const {isElder, loggedUser} = useContext(AppContext)
 
   useEffect(() => {
     requestNotificationPermission();
@@ -51,7 +52,10 @@ function App() {
             </ElderProtected>
           } />
           <Route path="/recipes" element={
-            <RecipesPage/>
+            <AuthProtected loggedUser={loggedUser}>
+              <RecipesPage/>
+            </AuthProtected>
+            
           } />
         </Routes>
         </div>

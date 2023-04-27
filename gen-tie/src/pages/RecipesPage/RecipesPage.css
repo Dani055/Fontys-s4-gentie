@@ -9,9 +9,12 @@
   min-height: 600px;
   overflow: hidden;
 }
-
+a{
+  text-decoration: none !important;
+}
 .profile-image-recipe {
   width: 40px;
+  height: 40px;
 }
 
 .recipe-card {

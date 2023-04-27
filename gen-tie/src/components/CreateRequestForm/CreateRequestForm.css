@@ -1,0 +1,13 @@
+.request-type-card{
+    background-color: var(--elder-main-6);
+    border-radius: 15px;
+    color: var(--elder-main-1);
+}
+.request-type-card:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+.link-back:hover{
+    cursor: pointer;
+    color: black !important ;
+}

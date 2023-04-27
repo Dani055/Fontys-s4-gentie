@@ -18,6 +18,8 @@ import AddRecipeSuccessPage from './pages/AddRecipeSuccessPage/AddRecipeSuccessP
 import GalleryPage from './pages/GalleryPage/GalleryPage';
 import VolunteerProfilePage from './pages/VolunteerProfilePage/VolunteerProfilePage';
 import { Button } from '@mui/material';
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 
 function App() {
   const {isElder,setIsElder, loggedUser, setLoggedUser} = useContext(AppContext)
@@ -43,6 +45,7 @@ function App() {
   };
 
   return (
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
     <ThemeProvider theme={isElder !== true && isElder !== null ? theme : themeElder}>
     <div className="App">
       <Router>
@@ -70,10 +73,9 @@ function App() {
             
           } />
           <Route path="/profile/:userId" element={
-            <AuthProtected loggedUser={loggedUser}>
+
               <VolunteerProfilePage/>
-            </AuthProtected>
-            
+         
           } />
           <Route path="/gallery" element={
             <AuthProtected loggedUser={loggedUser}>
@@ -99,7 +101,7 @@ function App() {
       </Router>
     </div>
      </ThemeProvider>
-    
+    </LocalizationProvider>
   );
 }
 

@@ -14,7 +14,7 @@ function VolunteerProfilePage(){
     let user = users.find(obj => obj.id == params.userId)
 
     if(!user){
-        navigate("/elder/home")
+        // navigate("/elder/home")
     }
     setUser(user)
   }, []);

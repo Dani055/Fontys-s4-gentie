@@ -39,7 +39,7 @@ function AddRecipePage(props) {
     return (
         <div className='container mt-5 px-4'>
             <div className='col-sm-6 mx-auto px-1'>
-                <h6 className="fw-600">What did you make?</h6>
+                <h4 className="fw-600">What did you make?</h4>
                 <p>Share it with others</p>
                 <div className="textarea">
                     <TextField label="Title" fullWidth placeholder="E.g Grandma's chili flakes" variant="outlined" />
@@ -48,12 +48,12 @@ function AddRecipePage(props) {
 
                 <Input inputRef={inputRef} type="file" accept="image/*" hidden onChange={handleImageChange} />
                 
-                <h6 className="mt-4">Add a photo</h6>
+                <h5 className="mt-4">Add a photo</h5>
                 <div className="media mt-3">
                     {imagePreviewUrl ? <img onClick={handlePlaceholderClick} src={imagePreviewUrl} alt="preview" /> : renderImagePlaceholder()}
                 </div>
 
-                <h6 className="mt-3">Ingredients</h6>
+                <h5 className="mt-3">Ingredients</h5>
                 <TextareaAutosize
                     className="w-100 p-3 textarea"
                     aria-label="ingredients"
@@ -61,7 +61,7 @@ function AddRecipePage(props) {
                     minRows={3}
                 />
                 
-                <h6 className="mt-3">Steps</h6>
+                <h5 className="mt-3">Steps</h5>
                 <TextareaAutosize
                     className="w-100 p-3 textarea"
                     aria-label="ingredients"

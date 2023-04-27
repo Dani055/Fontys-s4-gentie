@@ -19,6 +19,7 @@ function LandingPage(){
         setLoggedUser({
           id:100,
           name: "Josh Sevens",
+          phone: "+310-9858712",
           picture: "https://media.licdn.com/dms/image/C5603AQF9V7rulvhcGw/profile-displayphoto-shrink_800_800/0/1648538863146?e=2147483647&v=beta&t=adF9VspgE-A8s_PnLvt8pjs3D6MpbZrcM5FQInUnvAA"
         })
         navigate("/young/home")
@@ -28,6 +29,7 @@ function LandingPage(){
         setLoggedUser({
           id:1,
           name: "Bold Boelaars",
+          phone: "+310985123",
           picture: "https://upload.wikimedia.org/wikipedia/commons/5/54/Angry_Grandpa_-_2015_%28cropped%29.jpg"
         })
         navigate("/elder/home")

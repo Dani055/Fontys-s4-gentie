@@ -11,8 +11,6 @@ import './Home.css'
 
 function Home() {
   const { requests, setRequests, loggedUser } = useContext(AppContext)
-  const [name, setName] = useState("")
-  const [description, setDescription] = useState("")
   const [location, setLocation] = useState({ latitude: null, longitude: null });
 
   const redMarker = new Icon({
@@ -56,10 +54,6 @@ function Home() {
     }
   }, []);
 
-  const addr = () => {
-    setRequests([...requests, { user: { name }, description, latitude: location.latitude, longitude: location.longitude }])
-  }
-
   const sendNotifications = (req) => {
     const title = 'Applied for help';
     const options = {
@@ -82,7 +76,7 @@ function Home() {
       <div>
         {location.latitude && location.longitude ? (
           <>
-            <MapContainer center={[location.latitude, location.longitude]} zoom={13} style={{ height: '100vh', width: '100%' }}>
+            <MapContainer center={[location.latitude, location.longitude]} zoom={13} style={{ height: '100vh', width: '100%', zIndex: 0 }}>
               <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
               {requests.map((req) => (
                 <Marker key={req.id} icon={redMarker} position={[req.latitude, req.longitude]}>
@@ -108,26 +102,20 @@ function Home() {
                   </Popup>
                 </Marker>
               ))}
-              <Marker position={[location.latitude, location.longitude]}>
+              {/* <Marker position={[location.latitude, location.longitude]}>
                 <Popup>
                   <p className='pe-4'>
                     Your location
                   </p>
                 </Popup>
-              </Marker>
+              </Marker> */}
             </MapContainer>
           </>
         ) : (
           <div>Loading location...</div>
         )}
 
-        {/* <Button variant="contained" onClick={addr}>Add request</Button>
-        <TextField value={name} onChange={(event) => {
-          setName(event.target.value);
-        }} label="Name" variant="outlined" />
-        <TextField value={description} onChange={(event) => {
-          setDescription(event.target.value);
-        }} label="Desription" variant="outlined" /> */}
+        
       </div>
 
       {/* <div className='send-msg p-2'>

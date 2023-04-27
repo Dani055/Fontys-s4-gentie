@@ -1,0 +1,5 @@
+.profile-box{
+    min-height: 350px;
+    background-color: var(--elder-main-6);
+    border-radius: 15px;
+}

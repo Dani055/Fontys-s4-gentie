@@ -1,0 +1,18 @@
+.image-placeholder{
+    height: 260px;
+    background-color: var(--elder-main-6);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.media img{
+    border-radius: 15px;
+}
+.textarea{
+    border-radius: 15px;
+}
+.MuiOutlinedInput-notchedOutline {
+    border-radius: 15px !important;
+  }

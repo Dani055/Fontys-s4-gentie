@@ -2,7 +2,9 @@ import React, {useContext, useState, useEffect} from 'react';
 import { useNavigate } from "react-router-dom";
 import { AppContext } from '../../StateProvider';
 import Button from '@mui/material/Button';
-
+import logoblob from "../../images/logo-blob.svg"
+import millennialPana from "../../images/Millennial-pana.svg"
+import elderPana from "../../images/Grandma-pana.svg"
 import "./LandingPage.css"
 
 function LandingPage(){
@@ -15,6 +17,7 @@ function LandingPage(){
     const confirmYoung = () => {
         setIsElder(false)
         setLoggedUser({
+          id:100,
           name: "Josh Sevens",
           picture: "https://media.licdn.com/dms/image/C5603AQF9V7rulvhcGw/profile-displayphoto-shrink_800_800/0/1648538863146?e=2147483647&v=beta&t=adF9VspgE-A8s_PnLvt8pjs3D6MpbZrcM5FQInUnvAA"
         })
@@ -23,6 +26,7 @@ function LandingPage(){
     const confirmElder = () => {
         setIsElder(true)
         setLoggedUser({
+          id:1,
           name: "Bold Boelaars",
           picture: "https://upload.wikimedia.org/wikipedia/commons/5/54/Angry_Grandpa_-_2015_%28cropped%29.jpg"
         })
@@ -33,7 +37,7 @@ function LandingPage(){
   return (  
     <div>
       <div className='media'>
-        <img src=''></img>
+        <img src={logoblob}></img>
       </div>
       <div className='container px-4 pt-4 '>
         <div className='col-sm-6 mx-auto'>
@@ -48,7 +52,7 @@ function LandingPage(){
           </div>
           <div className='col-4 pb-2'>
             <div className='media'>
-              <img src='/Millennial-pana.svg'></img>
+              <img src={millennialPana}></img>
             </div>
           </div>
         </div>
@@ -59,7 +63,7 @@ function LandingPage(){
           </div>
           <div className='col-4'>
             <div className='media pb-3'>
-              <img src="/Grandma-pana.svg"></img>
+              <img src={elderPana}></img>
             </div>
           </div>
         </div>

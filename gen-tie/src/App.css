@@ -1,5 +1,10 @@
 
-
+.logout-button{
+  position: fixed !important;
+  z-index: 100 !important;
+  top: 10px !important;
+  right: 10px !important;
+}
 .bg-elder-light{
   background-color: var(--elder-main-6);
   border-radius: 15px;
@@ -13,7 +18,7 @@
 }
 .content{
   z-index: 1;
-  margin-bottom: 100px;
+  margin-bottom: 115px;
   position: relative;
 }
 .text-elder-primary{

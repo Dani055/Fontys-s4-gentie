@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import coloredImage from "../../images/colorized-image.jpg"
 
 function ImageConverter() {
   const [image, setImage] = useState(null);
@@ -45,7 +46,7 @@ function ImageConverter() {
         setConvertedImage(canvas.toDataURL());
       }
       else{
-        setConvertedImage(process.env.PUBLIC_URL + '/colorized-image.jpg  ')
+        setConvertedImage(coloredImage)
       }
       
       

@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Bold Boelaars",
+        "phone": "+310985123",
+        "picture": "https://upload.wikimedia.org/wikipedia/commons/5/54/Angry_Grandpa_-_2015_%28cropped%29.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Vulcho Stavrev",
+        "phone": "+3109120975",
+        "picture": "https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2023-01/grandpa-christmas-presents-mc-230116-03-19fb63.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Rositsa Nikolova",
+        "phone": "+3109751242",
+        "picture": "https://images.pexels.com/photos/509236/pexels-photo-509236.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    },
+    {
+        "id": 100,
+        "name": "Josh Sevens",
+        "phone": "+3109851235",
+        "picture": "https://media.licdn.com/dms/image/C5603AQF9V7rulvhcGw/profile-displayphoto-shrink_800_800/0/1648538863146?e=2147483647&v=beta&t=adF9VspgE-A8s_PnLvt8pjs3D6MpbZrcM5FQInUnvAA"
+    }
+]

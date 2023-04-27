@@ -1,0 +1,9 @@
+.success-box{
+    height: 350px;
+    background-color: var(--elder-main-6);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

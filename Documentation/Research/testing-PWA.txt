@@ -1,0 +1,35 @@
+Consent form
+Hello my name is .... First of all do I have your concent to record this conversation for university purposes?
+Thank you. Can you please introduce yourself? Okay <name>. Your response will be used for our research and your participation is voluntary so if you want to withdraw from this at any time you are allowed to. Also, you have the right to request from us not to upload your responses. Is that alright with you? 
+Let me explain a little, what we are going to do right now.  So you are going to test a prototype we have created. I want to hear your opinion about it and see how you navigate through it. The test should take up around 2-8 minutes. Should we start now?
+
+So first, we are going to start with a five second testing. When I tell you, you’re going to open the prototype and you have 5 seconds to look at it.
+1. 5 second testing (Qualitative data)
+- What do you remember? (ex: color, shapes)
+- What do you think this page was about?
+- What's your first impression about the site?
+(for the elderly the page with the tasks, for the youngsters the map with volunteer work)
+
+You can open the prototype again. We will continue with the task based testing. I am going to give you 4 tasks and you will have some time to complete them
+2. Task-based testing (Quantitative data)
+Elderly
+- ask for help about gardering
+- add your own recipe
+- upload your black and white picture and make it coloured
+- join the event "Picnic in the park"
+
+Youngesters
+- find a volunteer task that you can do
+- look at the steps of how to make sweet popcorn
+- upload your coloured picture and make it black and white
+- join the event "Picnic in the park"
+
+3. Think-aloud walkthrough (Qualitative data)
+- ask for feedback from all of the pages
+
+4. Conclusion
+- What grabbed your attention?
+- What things can be added or removed? 
+- Do you think an app like this is useful?
+- From scale of 1 to 5 how likely are you to use this app and why? 
+- If you have to describe this product in 3 words, what would they be?

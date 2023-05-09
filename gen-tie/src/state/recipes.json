@@ -4,6 +4,7 @@
       "prepTime": 15,
       "cookTime": 20,
       "difficulty": "Easy",
+      "about": "This dish is a deli egg-bacon-and-cheese-on-a-roll that has been pasta-fied, fancified, fetishized and turned into an Italian tradition that, like many inviolate Italian traditions, is actually far less old than the Mayflower. Because America may have contributed to its creation, carbonara is Exhibit A in the back-and-forth between Italy and the United States when it comes to food. Remember: the main goal is creaminess.",
       "tags": [
         "Cheese",
         "Healthy",
@@ -42,6 +43,7 @@
       "name": "Pork ribs",
       "prepTime": 20,
       "cookTime": 70,
+      "about":"To-die-for Pork Ribs recipe with fall apart meat slathered in a sticky homemade barbecue sauce! These oven Pork Ribs are rubbed with a spice mix, slow cooked until fall-apart-tender then basted generously with the tangy, sweet sauce. Can't-stop-eating it, finger-licking' good!",
       "difficulty": "Medium",
       "tags": [
         "Meat",
@@ -79,6 +81,7 @@
       "name": "Baklava",
       "prepTime": 20,
       "cookTime": 40,
+      "about": "Baklava is a delicious Greek dessert made up of layers of crispy phyllo dough, honey and nuts that's sooo easy to make. A Greek friend showed me how to make this fabulous recipe. Believe it or not, you can make Greek restaurant-worthy baklava in the comfort of your own kitchen — and it's actually not that hard!",
       "difficulty": "Hard",
       "tags": [
         "Sugar",
@@ -109,6 +112,7 @@
       "name": "Pelmeni",
       "prepTime": 60,
       "cookTime": 10,
+      "about":"Pelmeni originated from Siberia, the eastern-most region of Russia. It’s no wonder my husband loves them so much! He immigrated to the US from Siberia at nine years of age and lights up with joy any time I work up the energy to make pelmeni homemade.",
       "difficulty": "Easy",
       "tags": [
         "Fast",

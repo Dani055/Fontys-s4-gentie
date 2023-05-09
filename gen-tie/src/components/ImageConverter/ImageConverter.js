@@ -1,10 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
 import coloredImage from "../../images/colorized-image.jpg"
+import { Input } from '@mui/material';
+import Button from '@mui/material/Button';
+import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
+import DownloadIcon from '@mui/icons-material/Download';
+import "./ImageConverter.css"
 
 function ImageConverter() {
   const [image, setImage] = useState(null);
   const [convertedImage, setConvertedImage] = useState(null);
   const [mode, setMode] = useState('color');
+  const inputRef = useRef(null);
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
@@ -59,25 +68,56 @@ function ImageConverter() {
     link.click();
   };
 
+  const handlePlaceholderClick = () => {
+    inputRef.current.click();
+  }
+
+
+
   return (
-    <div>
-      <input type="file" accept="image/*" onChange={handleImageUpload} />
+    <div> 
+      <Input inputRef={inputRef} type="file" accept="image/*" hidden onChange={handleImageUpload} />
+
       {image && (
         <div className='media'>
-          <img src={image} alt="Uploaded Image" />
-          <select value={mode} onChange={handleModeChange}>
-            <option value="color">Color</option>
-            <option value="bw">Black & White</option>
-          </select>
-          <button onClick={handleConvert}>Convert</button>
+          <img src={image} onClick={handlePlaceholderClick} alt="Uploaded Image" />
+          <Select
+            id="picture-type-select"
+            className='mt-3'
+            value={mode}
+            fullWidth
+            onChange={handleModeChange}
+          >
+            <MenuItem value="color">Color</MenuItem>
+            <MenuItem value="bw">Black & White</MenuItem>
+          </Select>
+          <div className='row mt-4'>
+            <div className='col-5 mx-auto'>
+              <Button className='rounded-pill' onClick={handleConvert} fullWidth variant='contained' >Convert</Button>
+            </div>
+          </div>
+
           {convertedImage && (
-            <div>
+            <div className='mt-3'>
+              <p className='text-center'><KeyboardDoubleArrowDownIcon style={{ fontSize: 60 }}/></p>
+              <h5>Yey, you did it</h5>
+              <p>Save it and show it to your friends and family</p>
+
               <img src={convertedImage} alt="ConvertedImage" />
-              <button onClick={handleDownload}>Download Image</button>
+              <div className='row mt-4'>
+                <div className='col-7 mx-auto'>
+                  <Button className='rounded-pill' onClick={handleDownload} fullWidth variant='contained' >Save to gallery<DownloadIcon/></Button>
+                </div>
+              </div>
             </div>
           )}
         </div>
       )}
+      {!image && <div onClick={handlePlaceholderClick} className="image-placeholder-grey">
+        <AddPhotoAlternateIcon style={{ fontSize: 60 }} />
+        <h6 className="fw-bold pt-1">Upload your photo</h6>
+      </div>
+      }
     </div>
   );
   

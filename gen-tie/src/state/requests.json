@@ -2,7 +2,7 @@
     {
         "id": 1,
         "user" : {
-            "id": 4,
+            "id": 1,
             "name": "Bold Boelaars",
             "phone": "+310985123",
             "picture": "https://upload.wikimedia.org/wikipedia/commons/5/54/Angry_Grandpa_-_2015_%28cropped%29.jpg"
@@ -15,6 +15,7 @@
         },
         "description": "Help me with groceries",
         "type": "Shopping",
+        "address": "Hoogstraat 23",
         "benefit": "Teach you how to knit",
         "latitude": 51.432440,
         "longitude": 5.470393
@@ -30,6 +31,7 @@
         },
         "description": "I need to move a couch in another room. I am too weak to do it by myself",
         "type": "Transport",
+        "address": "Boschdijk 21",
         "benefit": "Tell you a story",
         "latitude": 51.450493,
         "longitude": 5.465741
@@ -42,6 +44,7 @@
             "phone": "+3109751242",
             "picture": "https://images.pexels.com/photos/509236/pexels-photo-509236.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
         },
+        "address": "Maalakker 9",
         "description": "Need help with gardening",
         "type": "Gardening",
         "benefit": "A box of strawberries",

@@ -93,6 +93,7 @@ function Home() {
                       </div>
                       <p><span className='text-young-primary'>Task type: </span>{req.type}</p>
                       <p><span className='text-young-primary'>Benefits </span>{req.benefit}</p>
+                      {req.address && <p><span className='text-young-primary'>Address </span>{req.address}</p>}
                       {req.volunteer === undefined ? <p>{req.description}</p> : null}
 
                       {req.volunteer === undefined ? <Button fullWidth variant="contained" className='rounded-pill' onClick={() => { applyForRequest(req) }}>Apply for help</Button> :

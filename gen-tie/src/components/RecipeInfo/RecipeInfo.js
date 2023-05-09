@@ -44,7 +44,10 @@ function RecipeInfo(props) {
                                 <p className="m-0">{props.recipe.difficulty}</p>
                             </div>
                         </div>
-                        <div className="row g-3 text-center mt-5">
+                        <p className="fw-600 mt-5 mb-1">About</p>
+                        <p className="m-0">{props.recipe.about}</p>
+                        <p className="fw-600 mt-5">Tags</p>
+                        <div className="row g-3 text-center">
                             {props.recipe.tags.map(tag => (
                                 <RecipeTag key={tag} tag={tag}/>
                             ))}

@@ -6,7 +6,7 @@
 
 .cardContainer {
   height: 300px;
-  min-height: 600px;
+  min-height: 500px;
   overflow: hidden;
 }
 a{
@@ -20,7 +20,7 @@ a{
 .recipe-card {
   position: relative;
   background-color: #fff;
-  height: 600px;
+  height: 500px;
   width: 100%;
   overflow: hidden;
   border-radius: 20px;

@@ -1,0 +1,50 @@
+.ticket{
+    position: relative;
+    padding: 40px;
+    margin-top: 5em;
+}
+
+.holes-top {
+	height: 50px;
+	width: 100%;
+	position: absolute;
+}
+
+.holes-top:before, .holes-top:after, .holes-bottom::after, .holes-bottom::before{
+    content: '';
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.holes-top:before{
+    left: -60px;
+    top: -60px
+}
+.holes-top:after{
+    right: 15px;
+    top: -60px
+}
+
+.holes-bottom {
+	height: 50px;
+	width: 100%;
+	position: absolute;
+    bottom: 0;
+}
+
+.holes-bottom:before{
+    left: -60px;
+    bottom: -25px
+}
+.holes-bottom:after{
+    right: 15px;
+    bottom: -25px
+}
+
+.qr img{
+    width: 100%;
+    height: auto;
+}

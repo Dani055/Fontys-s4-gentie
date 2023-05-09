@@ -20,6 +20,8 @@ import VolunteerProfilePage from './pages/VolunteerProfilePage/VolunteerProfileP
 import { Button } from '@mui/material';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
+import EventsPage from './pages/EventsPage/EventsPage';
+import EventDetailsPage from './pages/EventDetailsPage/EventDetailsPage';
 
 function App() {
   const {isElder,setIsElder, loggedUser, setLoggedUser} = useContext(AppContext)
@@ -73,13 +75,23 @@ function App() {
             
           } />
           <Route path="/profile/:userId" element={
-
-              <VolunteerProfilePage/>
-         
+            <VolunteerProfilePage/>
           } />
           <Route path="/gallery" element={
             <AuthProtected loggedUser={loggedUser}>
               <GalleryPage/>
+            </AuthProtected>
+            
+          } />
+          <Route path="/events" element={
+            <AuthProtected loggedUser={loggedUser}>
+              <EventsPage/>
+            </AuthProtected>
+            
+          } />
+          <Route path="/events/:eventId" element={
+            <AuthProtected loggedUser={loggedUser}>
+              <EventDetailsPage/>
             </AuthProtected>
             
           } />

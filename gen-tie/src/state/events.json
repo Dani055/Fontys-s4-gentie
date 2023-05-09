@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Picnic in the dark",
+        "date": "15 June",
+        "location": "Eindhoven 5426HJ",
+        "description": "A lovely way to spend a beautiful day outdoors. Join our event and take part in games, storytelling and tasty food.",
+        "participants": 46,
+        "maxParticipants": 60
+    },
+    {
+        "id": 2,
+        "name": "Bingo night",
+        "date": "10 August",
+        "location": "Amsterdam 8926AB",
+        "description": "A fun-filled evening that brings people together for a game of chance, laughter, and excitement.",
+        "participants": 17,
+        "maxParticipants": 30
+    }
+]

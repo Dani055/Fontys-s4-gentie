@@ -103,13 +103,13 @@ function Home() {
                   </Popup>
                 </Marker>
               ))}
-              {/* <Marker position={[location.latitude, location.longitude]}>
+              <Marker position={[location.latitude, location.longitude]}>
                 <Popup>
                   <p className='pe-4'>
                     Your location
                   </p>
                 </Popup>
-              </Marker> */}
+              </Marker>
             </MapContainer>
           </>
         ) : (

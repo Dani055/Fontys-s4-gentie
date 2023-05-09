@@ -1,13 +1,5 @@
-.send-msg{
-    position: sticky;
-    bottom: 56px;
-    z-index: 98;
-    display: flex;
-    background-color: white;
-    width: 100%;
-}
 .home{
-    margin-bottom: -86px;
+    margin-bottom: -115px;
 }
 .leaflet-popup-content-wrapper{
     border-radius: 20px;   

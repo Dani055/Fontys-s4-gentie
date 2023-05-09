@@ -3,7 +3,7 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import { AppContext } from '../../StateProvider';
 import QRImage from "../../images/qr.png"
 import "./EventDetailsPage.css"
-
+import Button from '@mui/material/Button';
 
 function EventDetailsPage() {
     const { events, isElder } = useContext(AppContext)
@@ -23,6 +23,7 @@ function EventDetailsPage() {
     return (
         <div className='container mt-5 px-4'>
             <div className='col-sm-6 mx-auto '>
+                <p className="link-back pt-3" onClick={() => {navigate('/events')}}>← back to events</p>
                 {event && <div className={`ticket ${isElder ? 'card-elder' : 'card-young'}`}>
                     <div class="holes-top"></div>
                     <div className='text-center'>
@@ -49,6 +50,12 @@ function EventDetailsPage() {
                     <div class="holes-bottom"></div>
                 </div>
                 }
+                <div className='row mt-4'>
+                    <div className='col-7 mx-auto'>
+                        <Button className='rounded-pill' fullWidth variant='contained' >Save to gallery
+                        </Button>
+                    </div>
+                </div>
             </div>
         </div>
     );

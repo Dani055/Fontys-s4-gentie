@@ -78,46 +78,48 @@ function ImageConverter() {
     <div> 
       <Input inputRef={inputRef} type="file" accept="image/*" hidden onChange={handleImageUpload} />
 
-      {image && (
-        <div className='media'>
-          <img src={image} onClick={handlePlaceholderClick} alt="Uploaded Image" />
-          <Select
-            id="picture-type-select"
-            className='mt-3'
-            value={mode}
-            fullWidth
-            onChange={handleModeChange}
-          >
-            <MenuItem value="color">Color</MenuItem>
-            <MenuItem value="bw">Black & White</MenuItem>
-          </Select>
-          <div className='row mt-4'>
-            <div className='col-5 mx-auto'>
-              <Button className='rounded-pill' onClick={handleConvert} fullWidth variant='contained' >Convert</Button>
-            </div>
-          </div>
-
-          {convertedImage && (
-            <div className='mt-3'>
-              <p className='text-center'><KeyboardDoubleArrowDownIcon style={{ fontSize: 60 }}/></p>
-              <h5>Yey, you did it</h5>
-              <p>Save it and show it to your friends and family</p>
-
-              <img src={convertedImage} alt="ConvertedImage" />
-              <div className='row mt-4'>
-                <div className='col-7 mx-auto'>
-                  <Button className='rounded-pill' onClick={handleDownload} fullWidth variant='contained' >Save to gallery<DownloadIcon/></Button>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-      )}
       {!image && <div onClick={handlePlaceholderClick} className="image-placeholder-grey">
         <AddPhotoAlternateIcon style={{ fontSize: 60 }} />
         <h6 className="fw-bold pt-1">Upload your photo</h6>
       </div>
       }
+
+      {image && (
+        <div className='media'>
+          <img src={image} onClick={handlePlaceholderClick} alt="Uploaded Image" />
+        </div>
+      )}
+            <Select
+        id="picture-type-select"
+        className='mt-3'
+        value={mode}
+        fullWidth
+        disabled={!image}
+        onChange={handleModeChange}
+      >
+        <MenuItem value="color">Color</MenuItem>
+        <MenuItem value="bw">Black & White</MenuItem>
+      </Select>
+      <div className='row mt-4'>
+        <div className='col-5 mx-auto'>
+          <Button className='rounded-pill' disabled={!image} onClick={handleConvert} fullWidth variant='contained' >Convert</Button>
+        </div>
+      </div>
+      {convertedImage && (
+        <div className='mt-3 media'>
+          <p className='text-center'><KeyboardDoubleArrowDownIcon style={{ fontSize: 60 }} /></p>
+          <h5>Yey, you did it</h5>
+          <p>Save it and show it to your friends and family</p>
+
+          <img src={convertedImage} alt="ConvertedImage" />
+          <div className='row mt-4'>
+            <div className='col-7 mx-auto'>
+              <Button className='rounded-pill' onClick={handleDownload} fullWidth variant='contained' >Save to gallery<DownloadIcon /></Button>
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   );
   

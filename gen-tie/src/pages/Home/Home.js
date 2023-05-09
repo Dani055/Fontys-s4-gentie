@@ -78,6 +78,13 @@ function Home() {
           <>
             <MapContainer center={[location.latitude, location.longitude]} zoom={13} style={{ height: '100vh', width: '100%', zIndex: 0 }}>
               <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+              <Marker position={[location.latitude, location.longitude]}>
+                <Popup>
+                  <p className='pe-4'>
+                    Your location
+                  </p>
+                </Popup>
+              </Marker>
               {requests.map((req) => (
                 <Marker key={req.id} icon={redMarker} position={[req.latitude, req.longitude]}>
                   <Popup className='rounded-circle'>
@@ -103,13 +110,7 @@ function Home() {
                   </Popup>
                 </Marker>
               ))}
-              <Marker position={[location.latitude, location.longitude]}>
-                <Popup>
-                  <p className='pe-4'>
-                    Your location
-                  </p>
-                </Popup>
-              </Marker>
+              
             </MapContainer>
           </>
         ) : (
@@ -119,10 +120,6 @@ function Home() {
         
       </div>
 
-      {/* <div className='send-msg p-2'>
-        <IconButton aria-label="send" color="primary" onClick={addr}><SendIcon /></IconButton>
-        <TextField label="message" size="small" fullWidth variant="outlined" />
-      </div> */}
     </div>
   );
 }

@@ -4,7 +4,7 @@ import { AppContext } from '../../StateProvider';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import HomeIcon from '@mui/icons-material/Home';
-import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import SoupKitchenIcon from '@mui/icons-material/SoupKitchen';
 import EventIcon from '@mui/icons-material/Event';
 import ImageIcon from '@mui/icons-material/Image';
 
@@ -40,7 +40,7 @@ function NavBar() {
       >
         {isElder ? <BottomNavigationAction label="Home" value="/elder/home" icon={<HomeIcon />}/> : <BottomNavigationAction label="Home" value="/young/home" icon={<HomeIcon />} />}
         <BottomNavigationAction label="Events" value="/events" icon={<EventIcon />} />
-        <BottomNavigationAction label="Recipes" value="/recipes" icon={<AutoStoriesIcon />} />
+        <BottomNavigationAction label="Nana's kitchen" value="/recipes" icon={<SoupKitchenIcon />} />
         <BottomNavigationAction label="Gallery" value="/gallery" icon={<ImageIcon />} />
       </BottomNavigation>
   );
